@@ -637,7 +637,7 @@ async function doForgotPassword() {
 
   setLoading('forgot-btn', true);
   var res = await sb.auth.resetPasswordForEmail(email, {
-    redirectTo: window.location.origin
+    redirectTo: window.location.origin + window.location.pathname
   });
   setLoading('forgot-btn', false);
 
